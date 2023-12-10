@@ -29,7 +29,7 @@ class Tickets(models.Model):
 class Messages(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
     date = models.DateTimeField(auto_now=True, null=True)
-    messages = models.TextField(max_length=1024, blank=True, null=True)
+    message = models.TextField(max_length=1024, blank=True, null=True)
     ticket = models.ForeignKey(Tickets, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
