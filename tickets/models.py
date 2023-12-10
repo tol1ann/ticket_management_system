@@ -11,7 +11,7 @@ class Tickets(models.Model):
 
     resolved = "resolved"
     unresolved = "unresolved"
-    freezed = "frezzed"
+    freezed = "freezed"
 
     statuses = [
         (resolved, 'Resolved'),
