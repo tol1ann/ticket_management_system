@@ -27,7 +27,7 @@ class CreateTicketView(generics.CreateAPIView):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-class SingleTicketView(generics.RetrieveAPIView):
+class SingleTicketView(generics.RetrieveUpdateAPIView):
     serializer_class = SingleTicketSerializer
     permission_classes = (IsAuthenticated,)
 

@@ -33,6 +33,8 @@ class CreateTicketSerializer(serializers.ModelSerializer):
 
 class SingleTicketSerializer(serializers.ModelSerializer):
     username = serializers.ReadOnlyField(source="user.username")
+    title = serializers.ReadOnlyField()
+    description = serializers.ReadOnlyField()
 
     class Meta:
         model = Tickets
